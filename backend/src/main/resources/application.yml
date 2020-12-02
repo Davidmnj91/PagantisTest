@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: Test Pagantis
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    mongodb:
+      authentication-database: ${MONGO_AUTH_DB:admin}
+      database: ${MONGO_DB:pagantis}
+      host: ${MONGO_HOST:localhost}
+      port: ${MONGO_PORT:27017}
+      username: ${MONGO_USER:pagantis}
+      password: ${MONGO_PASSWORD:pagantis123}
+
+application:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3000}
